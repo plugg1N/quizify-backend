@@ -13,7 +13,15 @@ psycopg = {extras = ["binary"], version = "^3.2.3"}
 sqlalchemy = "^2.0.36"
 pydantic-settings = "^2.6.0"
 pyjwt = "^2.10.0"
+torch = {version = "^2.5.1", source = "pytorch_cpu"}
+torchvision = {version = "^0.20.1", source = "pytorch_cpu"}
+numpy = "1.26.4"
 
+
+[[tool.poetry.source]]
+name = "pytorch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
 
 [build-system]
 requires = ["poetry-core"]
